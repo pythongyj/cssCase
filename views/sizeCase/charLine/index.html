@@ -1,0 +1,114 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Yunjie Ge
+ * @Date: 2020-11-12 09:14:54
+ * @LastEditors: Yunjie Ge
+ * @LastEditTime: 2020-11-12 09:53:54
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>连字符断行</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container{
+        position: fixed;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 0 4px 4px seagreen;
+        width: 300px;
+        height: 200px;
+        background: seagreen;
+        display: flex;
+        flex-direction: column;
+      }
+      .container-start {
+        top: 33%;
+        left: 35%;
+      }
+      .container-start span:first-child {
+        text-align: center;
+      }
+
+      .container-justify {
+        top: 33%;
+        left: 70%;
+      }
+      .container-justify span:first-child {
+        text-align: center;
+      }
+      .container-justify span:last-child {
+        text-align: justify;
+      }
+
+      .container-hyphens-justify {
+        top: 60%;
+        left: 70%;
+      }
+      .container-hyphens-justify span:first-child {
+        text-align: center;
+      }
+      .container-hyphens-justify span:last-child {
+        hyphens: auto;
+        text-align: justify;
+      }
+
+      .container-hyphens {
+        top: 60%;
+        left: 35%;
+      }
+      .container-hyphens span:first-child {
+        text-align: center;
+      }
+      .container-hyphens span:last-child {
+        hyphens: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container container-start">
+      <span>原始效果</span>
+      <span
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        dolorum corrupti deleniti! Repellendus est vitae eligendi? Quidem fugit
+        natus aspernatur possimus non fuga totam rem ea numquam. Asperiores,
+        ipsa quo.</span
+      >
+    </div>
+    <div class="container container-justify">
+      <span>text-align: justify的效果</span>
+      <span
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+        dolorum corrupti deleniti! Repellendus est vitae eligendi? Quidem fugit
+        natus aspernatur possimus non fuga totam rem ea numquam. Asperiores,
+        ipsa quo.</span
+      >
+    </div>
+    
+      <div class="container container-hyphens">
+        <span>hyphens: auto的效果</span>
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+          dolorum corrupti deleniti! Repellendus est vitae eligendi? Quidem fugit
+          natus aspernatur possimus non fuga totam rem ea numquam. Asperiores,
+          ipsa quo.</span
+        >
+      </div>
+      <div class="container container-hyphens-justify">
+        <span>hyphens: auto;text-align: justify的效果</span>
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+          dolorum corrupti deleniti! Repellendus est vitae eligendi? Quidem fugit
+          natus aspernatur possimus non fuga totam rem ea numquam. Asperiores,
+          ipsa quo.</span
+        >
+      </div>
+  </body>
+</html>

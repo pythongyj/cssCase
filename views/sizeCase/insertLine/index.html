@@ -1,0 +1,131 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Yunjie Ge
+ * @Date: 2020-11-12 09:57:11
+ * @LastEditors: Yunjie Ge
+ * @LastEditTime: 2020-11-12 10:40:25
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>插入换行</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        position: fixed;
+        width: 400px;
+        height: 200px;
+        background-color: seagreen;
+        box-shadow: 0 0 4px 4px seagreen;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        padding: 20px;
+      }
+      .title {
+        text-align: center;
+      }
+      dt{
+          font-weight: bold;
+      }
+      .container-start {
+        left: 20%;
+        top: 20%;
+      }
+
+      .container-one {
+        left: 50%;
+        top: 20%;
+      }
+      .container-one dd,
+      .container-one dt {
+        display: inline;
+      }
+
+      .container-two {
+        left: 80%;
+        top: 20%;
+      }
+      .container-two dd,
+      .container-two dt {
+        display: inline;
+      }
+      .container-two dd + dt::before {
+        content: "\A";
+        white-space: pre;
+      }
+
+      .container-three {
+        left: 20%;
+        top: 50%;
+      }
+      .container-three dd,
+      .container-three dt {
+        display: inline;
+      }
+      .container-three dd + dt::before {
+        content: "\A";
+        white-space: pre;
+      }
+      .container-three dd + dd::before {
+        content: ",";
+        margin-left: -0.25em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container container-start">
+      <div class="title">原始效果</div>
+      <dl>
+        <dt>Name:</dt>
+        <dd>Long Love</dd>
+        <dt>Email:</dt>
+        <dd>1329712473@qq.com</dd>
+        <dd>1329712473@qq.com</dd>
+        <dt>Gender:</dt>
+        <dd>Male</dd>
+      </dl>
+    </div>
+    <div class="container container-one">
+      <div class="title">dldt变为行内元素</div>
+      <dl>
+        <dt>Name:</dt>
+        <dd>Long Love</dd>
+        <dt>Email:</dt>
+        <dd>1329712473@qq.com</dd>
+        <dd>1329712473@qq.com</dd>
+        <dt>Gender:</dt>
+        <dd>Male</dd>
+      </dl>
+    </div>
+    <div class="container container-two">
+      <div class="title">使用伪元素换行</div>
+      <dl>
+        <dt>Name:</dt>
+        <dd>Long Love</dd>
+        <dt>Email:</dt>
+        <dd>1329712473@qq.com</dd>
+        <dd>1329712473@qq.com</dd>
+        <dt>Gender:</dt>
+        <dd>Male</dd>
+      </dl>
+    </div>
+    <div class="container container-three">
+        <div class="title">使用伪元素添加逗号链接符</div>
+        <dl>
+          <dt>Name:</dt>
+          <dd>Long Love</dd>
+          <dt>Email:</dt>
+          <dd>1329712473@qq.com</dd>
+          <dd>1329712473@qq.com</dd>
+          <dt>Gender:</dt>
+          <dd>Male</dd>
+        </dl>
+      </div>
+  </body>
+</html>
