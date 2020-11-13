@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #323232;
+}
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.flex {
+  display: flex;
+}
+.flex__1 {
+  flex: 1;
+}
+.w__300 {
+  width: 30%;
+}
+.h__100 {
+  height: 100%;
+}
+.h_100-160{
+    height: calc(100vh - 300px);
+}
+.py__020{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.space-between {
+  justify-content: space-between;
+}
+.border-box{
+    box-sizing: border-box;
+}
+.bx {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body::after {
+  content: "";
+  background: url(../images/ali.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+nav {
+  border-bottom: 1px solid #000;
+  height: 60px;
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  z-index: 1;
+}
+
+.content {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+nav {
+  height: 80px;
+  line-height: 80px;
+}
+.logo {
+  font-size: 30px;
+}
+.nav a {
+  display: block;
+  font-size: 18px;
+  padding: 0 20px;
+  text-align: right;
+}
+.nav a:last-child {
+  padding-right: 0;
+}
+.aside-scroll {
+  overflow: scroll;
+}

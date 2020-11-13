@@ -1,0 +1,75 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Yunjie Ge
+ * @Date: 2020-11-12 16:18:49
+ * @LastEditors: Yunjie Ge
+ * @LastEditTime: 2020-11-12 16:42:45
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文本行的斑马条纹</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        width: 200px;
+        height: 18em;
+        background-color: seagreen;
+        box-shadow: 0 0 4px 4px seagreen;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        padding: 20px;
+        position: fixed;
+        font-size: 18px;
+        line-height: 1.5em;
+      }
+      .container-start {
+        left: 30%;
+        top: 40%;
+      }
+      .container-one {
+        left: 50%;
+        top: 40%;
+        background: linear-gradient(to top, red 50%, yellow 50%, yellow 100%);
+        background-size: auto 3em;
+        background-origin: content-box;
+      }
+      .container-two {
+        left: 70%;
+        top: 40%;
+        background: linear-gradient(to top, red 50%, yellow 50%, yellow 100%);
+        background-size: auto 3em;
+        background-origin: content-box;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container container-start">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia
+        similique deleniti quos, quisquam tempora veritatis a cum, quibusdam,
+        ipsam consequuntur quam libero illo deserunt aperiam impedit pariatur
+        magni error?
+      </div>
+    <div class="container container-one">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia
+      similique deleniti quos, quisquam tempora veritatis a cum, quibusdam,
+      ipsam consequuntur quam libero illo deserunt aperiam impedit pariatur
+      magni error?
+    </div>
+    <div class="container container-two">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia
+        similique deleniti quos, quisquam tempora veritatis a cum, quibusdam,
+        ipsam consequuntur quam libero illo deserunt aperiam impedit pariatur
+        magni error?
+      </div>
+  </body>
+</html>
