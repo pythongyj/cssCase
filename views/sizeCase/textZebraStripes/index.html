@@ -2,9 +2,9 @@
  * @Descripttion: 
  * @version: 
  * @Author: Yunjie Ge
- * @Date: 2020-11-12 16:18:49
+ * @Date: 2020-11-12 09:01:30
  * @LastEditors: Yunjie Ge
- * @LastEditTime: 2020-11-12 16:42:45
+ * @LastEditTime: 2020-11-13 14:47:52
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +12,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>文本行的斑马条纹</title>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/public.css" />
+    <script src="../../../js/JParticles.js"></script>
     <style>
-      * {
-        padding: 0;
-        margin: 0;
-      }
-      .container {
+      .middle .container {
         width: 200px;
         height: 18em;
         background-color: seagreen;
@@ -29,18 +31,18 @@
         font-size: 18px;
         line-height: 1.5em;
       }
-      .container-start {
+      .middle .container-start {
         left: 30%;
         top: 40%;
       }
-      .container-one {
+      .middle .container-one {
         left: 50%;
         top: 40%;
         background: linear-gradient(to top, red 50%, yellow 50%, yellow 100%);
         background-size: auto 3em;
         background-origin: content-box;
       }
-      .container-two {
+      .middle .container-two {
         left: 70%;
         top: 40%;
         background: linear-gradient(to top, red 50%, yellow 50%, yellow 100%);
@@ -49,27 +51,67 @@
         padding-top: 0;
         padding-bottom: 0;
       }
-      
     </style>
   </head>
   <body>
-    <div class="container container-start">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia
-        similique deleniti quos, quisquam tempora veritatis a cum, quibusdam,
-        ipsam consequuntur quam libero illo deserunt aperiam impedit pariatur
-        magni error?
+    <div class="content">
+      <div class="bx">
+        <nav class="flex space-between">
+          <span class="logo">cssCase</span>
+          <div class="nav flex">
+            <a href="http://www.css.case.qcwy.org.cn">首页</a>
+            <a target="_blank" href="">案例列表</a>
+            <a href="http://www.blog.geyunjie.com">博客</a>
+            <a target="_blank" href="./about.html">关于我</a>
+            <a target="_blank" href="https://github.com/pythongyj/cssCase"
+              >github</a
+            >
+          </div>
+        </nav>
+        <div class="middle flex__1 py__020 border-box">
+          <div class="container container-start">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+            officia similique deleniti quos, quisquam tempora veritatis a cum,
+            quibusdam, ipsam consequuntur quam libero illo deserunt aperiam
+            impedit pariatur magni error?
+          </div>
+          <div class="container container-one">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+            officia similique deleniti quos, quisquam tempora veritatis a cum,
+            quibusdam, ipsam consequuntur quam libero illo deserunt aperiam
+            impedit pariatur magni error?
+          </div>
+          <div class="container container-two">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+            officia similique deleniti quos, quisquam tempora veritatis a cum,
+            quibusdam, ipsam consequuntur quam libero illo deserunt aperiam
+            impedit pariatur magni error?
+          </div>
+        </div>
+        <footer class="flex-center-center flex-column">
+          <div>友情链接</div>
+          <div class="flex-center-center">
+            <dl>
+              <dd>友情链接</dd>
+              <dt>Lorem.</dt>
+            </dl>
+            <dl>
+              <dd>友情链接</dd>
+              <dt>Lorem.</dt>
+            </dl>
+          </div>
+        </footer>
       </div>
-    <div class="container container-one">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia
-      similique deleniti quos, quisquam tempora veritatis a cum, quibusdam,
-      ipsam consequuntur quam libero illo deserunt aperiam impedit pariatur
-      magni error?
+      <div id="container" class="container"></div>
     </div>
-    <div class="container container-two">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat officia
-        similique deleniti quos, quisquam tempora veritatis a cum, quibusdam,
-        ipsam consequuntur quam libero illo deserunt aperiam impedit pariatur
-        magni error?
-      </div>
+
+    <script>
+      new JParticles.particle("#container", {
+        num: "0.1",
+        lineShape: "cube",
+        parallax: true,
+        eventElem: document.querySelector(".bx"),
+      });
+    </script>
   </body>
 </html>

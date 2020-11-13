@@ -4,7 +4,7 @@
  * @Author: Yunjie Ge
  * @Date: 2020-11-12 09:01:30
  * @LastEditors: Yunjie Ge
- * @LastEditTime: 2020-11-13 11:26:41
+ * @LastEditTime: 2020-11-13 14:48:51
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +18,67 @@
     />
     <link rel="stylesheet" href="./css/public.css" />
     <script src="./js/JParticles.js"></script>
-    <style></style>
+    <style>
+      .middle li {
+        border: 0;
+        margin: 20px;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 50px;
+        color: white;
+        outline: none;
+        position: relative;
+      }
+      .middle li a {
+        color: #eee;
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding: 15px 20px;
+        z-index: 1;
+      }
+
+      .middle li:before {
+        content: "";
+        display: block;
+        background: linear-gradient(
+          to left,
+          rgba(255, 255, 255, 0) 50%,
+          rgba(255, 255, 255, 0.4) 50%
+        );
+        background-size: 210% 100%;
+        background-position: right bottom;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-radius: 50px;
+        transition: all 1s;
+        -webkit-transition: all 1s;
+      }
+
+      .middle li {
+        background-image: linear-gradient(to right, #25aae1, #40e495);
+        box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+      }
+
+      /* .purple {
+        background-image: linear-gradient(to right, #6253e1, #852d91);
+        box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+      } */
+
+      .middle li:hover:before {
+        background-position: left bottom;
+      }
+      /* 
+      .green:hover:before {
+        background-position: left bottom;
+      } */
+    </style>
   </head>
   <body>
     <div class="content">
@@ -27,7 +87,7 @@
           <span class="logo">cssCase</span>
           <div class="nav flex">
             <a href="http://www.css.case.qcwy.org.cn">首页</a>
-            <a href="">案例列表</a>
+            <a target="_blank" href="">案例列表</a>
             <a href="http://www.blog.geyunjie.com">博客</a>
             <a target="_blank" href="./about.html">关于我</a>
             <a target="_blank" href="https://github.com/pythongyj/cssCase"
@@ -35,133 +95,64 @@
             >
           </div>
         </nav>
-        <div class="middle flex__1 flex py__020 border-box">
-          <aside class="w__300 h_100-160 aside-scroll ">
-            <ul>
-              <li>
-                <a href="./views/sizeCase/charLine/index.html">连字符断行</a>
-              </li>
-              <li>
-                <a href="./views/sizeCase/textZebraStripes/index.html"
-                  >文本行的斑马条纹</a
-                >
-              </li>
-              <li>Lorem, ipsum dolor.</li>
-              <li>Magni, ut ad!</li>
-              <li>Natus, fugiat tempora!</li>
-              <li>Aut, mollitia accusantium?</li>
-              <li>Omnis, nihil dolores?</li>
-              <li>Totam, est adipisci.</li>
-              <li>Sit, minus laboriosam?</li>
-              <li>Distinctio, sunt commodi.</li>
-              <li>Quo, dolor odio!</li>
-              <li>Praesentium, aspernatur nisi!</li>
-              <li>Soluta, rem provident.</li>
-              <li>Culpa, ipsum et.</li>
-              <li>Praesentium, non! Facere.</li>
-              <li>Culpa, magnam voluptatem.</li>
-              <li>Soluta, maiores incidunt.</li>
-              <li>Enim, blanditiis quos.</li>
-              <li>Eos, iste quo.</li>
-              <li>Autem, doloribus repellat?</li>
-              <li>Ea, ut in.</li>
-              <li>Iusto, voluptatibus at.</li>
-              <li>Unde, cumque facere!</li>
-              <li>Dolorum, pariatur quod.</li>
-              <li>Corporis, atque animi?</li>
-              <li>Nam, possimus fugiat.</li>
-              <li>Illum, assumenda iusto.</li>
-              <li>Pariatur, qui minus!</li>
-              <li>Quaerat, qui eligendi.</li>
-              <li>Ducimus, laudantium eius.</li>
-              <li>Molestias, ipsum molestiae!</li>
-              <li>Ex, quam cum?</li>
-              <li>Repudiandae, beatae quibusdam?</li>
-              <li>Quidem, ullam odio!</li>
-              <li>Aut, neque? Odit!</li>
-              <li>Ut, quia corrupti!</li>
-              <li>Enim, quaerat id.</li>
-              <li>Culpa, cum ad.</li>
-              <li>Alias, libero praesentium.</li>
-              <li>Labore, dolor consequatur.</li>
-              <li>Earum, repellendus saepe?</li>
-              <li>Autem, in expedita!</li>
-              <li>Distinctio, natus nesciunt.</li>
-              <li>Id, ut possimus?</li>
-              <li>Adipisci, veniam modi.</li>
-              <li>In, quaerat quos.</li>
-              <li>Ut, voluptates expedita.</li>
-              <li>Tempora, atque vero?</li>
-              <li>Excepturi, sit similique?</li>
-              <li>Omnis, dicta at!</li>
-              <li>Debitis, aliquid quam?</li>
-              <li>Labore, velit odit.</li>
-              <li>Cumque, hic exercitationem.</li>
-              <li>Iusto, itaque eaque?</li>
-              <li>Reprehenderit, debitis iste.</li>
-              <li>Odio, labore nulla.</li>
-              <li>Culpa, labore tempore!</li>
-              <li>Quibusdam, dicta doloribus?</li>
-              <li>Natus, eum nulla.</li>
-              <li>Esse, ipsum sit!</li>
-              <li>Odit, ea ducimus!</li>
-              <li>Id, asperiores quae!</li>
-              <li>Veritatis, cum! Atque.</li>
-              <li>Iusto, sequi odio!</li>
-              <li>Beatae, minus fugit!</li>
-              <li>Quam, qui ducimus?</li>
-              <li>Inventore, corporis corrupti.</li>
-              <li>Velit, ipsum cupiditate!</li>
-              <li>Omnis, dolor enim?</li>
-              <li>Culpa, quos aperiam!</li>
-              <li>Excepturi, est molestiae?</li>
-              <li>Ullam, tempora delectus.</li>
-              <li>Voluptatibus, cumque laborum?</li>
-              <li>Dolores, nostrum odit!</li>
-              <li>Vero, adipisci in.</li>
-              <li>Fuga, ipsam tempore?</li>
-              <li>Minus, facere accusamus?</li>
-              <li>Delectus, itaque maiores?</li>
-              <li>Ut, natus incidunt?</li>
-              <li>Quo, quidem ad.</li>
-              <li>Cum, asperiores nulla!</li>
-              <li>Sunt, nemo numquam?</li>
-              <li>Ea, natus reiciendis!</li>
-              <li>Cumque, voluptas autem!</li>
-              <li>Recusandae, laudantium facilis!</li>
-              <li>Et, aperiam omnis!</li>
-              <li>Veritatis, esse numquam.</li>
-              <li>Modi, perferendis explicabo.</li>
-              <li>Alias, quis suscipit.</li>
-              <li>Fugiat, tempora hic.</li>
-              <li>In, quasi cumque?</li>
-              <li>Alias, vero aspernatur.</li>
-              <li>Quo, obcaecati modi!</li>
-              <li>Magnam, ullam ab?</li>
-              <li>Voluptatem, qui atque.</li>
-              <li>Dolorem, sequi sunt?</li>
-              <li>Tempore, tenetur a?</li>
-              <li>Sint, tenetur. Quas.</li>
-              <li>Voluptate, minima cum.</li>
-              <li>Quod, vitae iure!</li>
-              <li>Error, consequatur voluptatem!</li>
-              <li>Maxime, eaque ipsa.</li>
-            </ul>
-          </aside>
-          <article>我是内容</article>
+        <div class="middle flex__1 py__020 border-box">
+          <ul class="flex">
+            <li>
+              <a href="./views/sizeCase/charLine/index.html">连字符断行</a>
+            </li>
+            <li>
+              <a href="./views/sizeCase/insertLine/index.html">插入换行</a>
+            </li>
+            <li>
+              <a href="./views/sizeCase/textZebraStripes/index.html"
+                >文本行的斑马条纹</a
+              >
+            </li>
+          </ul>
         </div>
-        <footer class="">底部</footer>
+        <footer class="flex-center-center flex-column">
+          <div>友情链接</div>
+          <div class="flex-center-center">
+            <dl>
+              <dd>友情链接</dd>
+              <dt>Lorem.</dt>
+            </dl>
+            <dl>
+              <dd>友情链接</dd>
+              <dt>Lorem.</dt>
+            </dl>
+          </div>
+        </footer>
       </div>
       <div id="container" class="container"></div>
     </div>
 
     <script>
       new JParticles.particle("#container", {
-        num: "0.07",
+        num: "0.1",
         lineShape: "cube",
         parallax: true,
         eventElem: document.querySelector(".bx"),
       });
+      window.onload = function () {
+        var el = document.querySelectorAll(".middle li");
+        for (let i = 0; i < el.length; i++) {
+          var r = parseInt(Math.random(10) * 255);
+          var g = parseInt(Math.random(10) * 255);
+          var b = parseInt(Math.random(10) * 255);
+
+          var r1 = parseInt(Math.random(10) * 255);
+          var g1 = parseInt(Math.random(10) * 255);
+          var b1 = parseInt(Math.random(10) * 255);
+          el[
+            i
+          ].style.background = `linear-gradient(to right, rgb(${r},${g},${b}),  rgb(${r1},${g1},${b1}))`;
+          el[i].addEventListener("click", function (e) {
+            var url = e.target.children[0].attributes[0].value.substring(2);
+            window.open(`${url}`);
+          });
+        }
+      };
     </script>
   </body>
 </html>
