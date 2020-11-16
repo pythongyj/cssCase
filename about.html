@@ -2,9 +2,9 @@
  * @Descripttion: 
  * @version: 
  * @Author: Yunjie Ge
- * @Date: 2020-11-13 09:18:42
+ * @Date: 2020-11-12 09:01:30
  * @LastEditors: Yunjie Ge
- * @LastEditTime: 2020-11-13 09:21:48
+ * @LastEditTime: 2020-11-16 11:25:04
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +16,68 @@
       href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/public.css" />
+    <script src="./js/JParticles.js"></script>
+    <style>
+      
+    </style>
   </head>
   <body>
-    <div>关于我的页面，敬请期待</div>
+    <div class="content">
+      <div class="bx">
+        <nav class="flex space-between">
+          <span class="logo">cssCase</span>
+          <div class="nav">
+            <ul class="flex">
+              <li><a href="./index.html">首页</a></li>
+              <li><a href="./caseList.html">案例列表</a></li>
+              <li><a href="http://www.blog.geyunjie.com">博客</a></li>
+              <li><a >关于我</a></li>
+              <li>
+                <a target="_blank" href="https://github.com/pythongyj/cssCase"
+                  >github</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="middle flex__1 py__020 border-box">
+          
+        </div>
+        <footer class="flex-center-center flex-column">
+          <p>
+            <span> Copyright © 2017-2020</span
+            ><span>
+              优秀经验<a
+                href="https://juejin.im/"
+                target="_blank"
+                rel="noopener"
+              >
+                掘金.</a
+              ></span
+            ><span>
+              视频学习<a
+                rel="nofollow"
+                target="_blank"
+                href="https://www.bilibili.com/"
+              >
+                B站学习.</a
+              ></span
+            >
+          </p>
+          <p><span> 浙ICP备19013115号-2 程序即女友，长情终一生</span></p>
+        </footer>
+      </div>
+      <div id="container" class="container"></div>
+    </div>
+
+    <script>
+      new JParticles.particle("#container", {
+        num: "0.1",
+        lineShape: "cube",
+        parallax: true,
+        eventElem: document.querySelector(".bx"),
+      });
+    </script>
   </body>
 </html>

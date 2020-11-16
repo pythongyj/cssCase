@@ -4,7 +4,7 @@
  * @Author: Yunjie Ge
  * @Date: 2020-11-12 09:01:30
  * @LastEditors: Yunjie Ge
- * @LastEditTime: 2020-11-16 11:38:51
+ * @LastEditTime: 2020-11-16 11:45:22
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -16,14 +16,14 @@
       href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../../css/public.css" />
-    <script src="../../../js/JParticles.js"></script>
+    <link rel="stylesheet" href="../../css/public.css" />
+    <script src="../../js/JParticles.js"></script>
     <style>
       .middle {
         position: relative;
       }
       .container-middle {
-        position: fixed;
+        position: absolute;
         transform: translate(-50%, -50%);
         border-radius: 20px;
         padding: 20px;
@@ -35,45 +35,8 @@
         flex-direction: column;
       }
       .container-start {
-        top: 33%;
-        left: 40%;
-      }
-      .container-start span:first-child {
-        text-align: center;
-      }
-
-      .container-justify {
-        top: 33%;
-        left: 65%;
-      }
-      .container-justify span:first-child {
-        text-align: center;
-      }
-      .container-justify span:last-child {
-        text-align: justify;
-      }
-
-      .container-hyphens-justify {
-        top: 60%;
-        left: 65%;
-      }
-      .container-hyphens-justify span:first-child {
-        text-align: center;
-      }
-      .container-hyphens-justify span:last-child {
-        hyphens: auto;
-        text-align: justify;
-      }
-
-      .container-hyphens {
-        top: 60%;
-        left: 40%;
-      }
-      .container-hyphens span:first-child {
-        text-align: center;
-      }
-      .container-hyphens span:last-child {
-        hyphens: auto;
+        top: 25%;
+        left: 20%;
       }
     </style>
   </head>
@@ -105,43 +68,7 @@
           </div>
         </nav>
         <div class="middle flex__1 py__020 border-box">
-          <div class="container-middle container-start">
-            <span>原始效果</span>
-            <span
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-              dolorum corrupti deleniti! Repellendus est vitae eligendi? Quidem
-              fugit natus aspernatur possimus non fuga totam rem ea numquam.
-              Asperiores, ipsa quo.</span
-            >
-          </div>
-          <div class="container-middle container-justify">
-            <span>text-align: justify的效果</span>
-            <span
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-              dolorum corrupti deleniti! Repellendus est vitae eligendi? Quidem
-              fugit natus aspernatur possimus non fuga totam rem ea numquam.
-              Asperiores, ipsa quo.</span
-            >
-          </div>
-
-          <div class="container-middle container-hyphens">
-            <span>hyphens: auto的效果</span>
-            <span
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-              dolorum corrupti deleniti! Repellendus est vitae eligendi? Quidem
-              fugit natus aspernatur possimus non fuga totam rem ea numquam.
-              Asperiores, ipsa quo.</span
-            >
-          </div>
-          <div class="container-middle container-hyphens-justify">
-            <span>hyphens: auto;text-align: justify的效果</span>
-            <span
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-              dolorum corrupti deleniti! Repellendus est vitae eligendi? Quidem
-              fugit natus aspernatur possimus non fuga totam rem ea numquam.
-              Asperiores, ipsa quo.</span
-            >
-          </div>
+          <div class="container-middle container-start"></div>
         </div>
         <footer class="flex-center-center flex-column">
           <p>

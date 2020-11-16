@@ -1,0 +1,179 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: Yunjie Ge
+ * @Date: 2020-11-12 09:01:30
+ * @LastEditors: Yunjie Ge
+ * @LastEditTime: 2020-11-16 11:41:54
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>案例列表</title>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/public.css" />
+    <script src="./js/JParticles.js"></script>
+    <style>
+      .middle li {
+        border: 0;
+        margin: 20px;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 50px;
+        color: white;
+        outline: none;
+        position: relative;
+      }
+      .middle li a {
+        color: #eee;
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding: 15px 20px;
+        z-index: 1;
+      }
+
+      .middle li:before {
+        content: "";
+        display: block;
+        background: linear-gradient(
+          to left,
+          rgba(255, 255, 255, 0) 50%,
+          rgba(255, 255, 255, 0.4) 50%
+        );
+        background-size: 210% 100%;
+        background-position: right bottom;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-radius: 50px;
+        transition: all 1s;
+        -webkit-transition: all 1s;
+      }
+
+      .middle li {
+        background-image: linear-gradient(to right, #25aae1, #40e495);
+        box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+      }
+
+      /* .purple {
+        background-image: linear-gradient(to right, #6253e1, #852d91);
+        box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+      } */
+
+      .middle li:hover:before {
+        background-position: left bottom;
+      }
+      /* 
+      .green:hover:before {
+        background-position: left bottom;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="bx">
+        <nav class="flex space-between">
+          <span class="logo">cssCase</span>
+          <div class="nav">
+            <ul class="flex">
+              <li><a href="./index.html">首页</a></li>
+              <li><a href="">案例列表</a></li>
+              <li>
+                <a target="_blank" href="http://www.blog.geyunjie.com">博客</a>
+              </li>
+              <li><a href="./about.html">关于我</a></li>
+              <li>
+                <a target="_blank" href="https://github.com/pythongyj/cssCase"
+                  >github</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="middle flex__1 py__020 border-box">
+          <ul class="flex">
+            <li>
+              <a href="./views/template/index.html"
+                >添加案例的模版</a
+              >
+            </li>
+            <li>
+              <a href="./views/sizeCase/charLine/index.html">连字符断行</a>
+            </li>
+            <li>
+              <a href="./views/sizeCase/insertLine/index.html">插入换行</a>
+            </li>
+            <li>
+              <a href="./views/sizeCase/textZebraStripes/index.html"
+                >文本行的斑马条纹</a
+              >
+            </li>
+          </ul>
+        </div>
+        <footer class="flex-center-center flex-column">
+          <p>
+            <span> Copyright © 2017-2020</span
+            ><span>
+              优秀经验<a
+                href="https://juejin.im/"
+                target="_blank"
+                rel="noopener"
+              >
+                掘金.</a
+              ></span
+            ><span>
+              视频学习<a
+                rel="nofollow"
+                target="_blank"
+                href="https://www.bilibili.com/"
+              >
+                B站学习.</a
+              ></span
+            >
+          </p>
+          <p><span> 浙ICP备19013115号-2 程序即女友，长情终一生</span></p>
+        </footer>
+      </div>
+      <div id="container" class="container"></div>
+    </div>
+
+    <script>
+      new JParticles.particle("#container", {
+        num: "0.1",
+        lineShape: "cube",
+        parallax: true,
+        eventElem: document.querySelector(".bx"),
+      });
+      window.onload = function () {
+        var el = document.querySelectorAll(".middle li");
+        for (let i = 0; i < el.length; i++) {
+          var r = parseInt(Math.random(10) * 255);
+          var g = parseInt(Math.random(10) * 255);
+          var b = parseInt(Math.random(10) * 255);
+
+          var r1 = parseInt(Math.random(10) * 255);
+          var g1 = parseInt(Math.random(10) * 255);
+          var b1 = parseInt(Math.random(10) * 255);
+          el[
+            i
+          ].style.background = `linear-gradient(to right, rgb(${r},${g},${b}),  rgb(${r1},${g1},${b1}))`;
+          el[i].addEventListener("click", function (e) {
+            var url = e.target.children[0].attributes[0].value.substring(2);
+            window.open(`${url}`);
+          });
+        }
+      };
+    </script>
+  </body>
+</html>

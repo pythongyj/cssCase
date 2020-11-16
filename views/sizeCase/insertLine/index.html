@@ -2,23 +2,28 @@
  * @Descripttion: 
  * @version: 
  * @Author: Yunjie Ge
- * @Date: 2020-11-12 09:57:11
+ * @Date: 2020-11-12 09:01:30
  * @LastEditors: Yunjie Ge
- * @LastEditTime: 2020-11-12 10:40:25
+ * @LastEditTime: 2020-11-16 11:35:04
 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>插入换行</title>
+    <title>文本行的斑马条纹</title>
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/public.css" />
+    <script src="../../../js/JParticles.js"></script>
     <style>
-      * {
-        padding: 0;
-        margin: 0;
+      .middle{
+        position: relative;
       }
-      .container {
-        position: fixed;
+      .container-middle {
+        position: absolute;
         width: 400px;
         height: 200px;
         background-color: seagreen;
@@ -30,17 +35,17 @@
       .title {
         text-align: center;
       }
-      dt{
-          font-weight: bold;
+      dt {
+        font-weight: bold;
       }
       .container-start {
         left: 20%;
-        top: 20%;
+        top: 25%;
       }
 
       .container-one {
-        left: 50%;
-        top: 20%;
+        left: 80%;
+        top: 25%;
       }
       .container-one dd,
       .container-one dt {
@@ -49,7 +54,7 @@
 
       .container-two {
         left: 80%;
-        top: 20%;
+        top: 70%;
       }
       .container-two dd,
       .container-two dt {
@@ -62,7 +67,7 @@
 
       .container-three {
         left: 20%;
-        top: 50%;
+        top: 70%;
       }
       .container-three dd,
       .container-three dt {
@@ -79,53 +84,116 @@
     </style>
   </head>
   <body>
-    <div class="container container-start">
-      <div class="title">原始效果</div>
-      <dl>
-        <dt>Name:</dt>
-        <dd>Long Love</dd>
-        <dt>Email:</dt>
-        <dd>1329712473@qq.com</dd>
-        <dd>1329712473@qq.com</dd>
-        <dt>Gender:</dt>
-        <dd>Male</dd>
-      </dl>
-    </div>
-    <div class="container container-one">
-      <div class="title">dldt变为行内元素</div>
-      <dl>
-        <dt>Name:</dt>
-        <dd>Long Love</dd>
-        <dt>Email:</dt>
-        <dd>1329712473@qq.com</dd>
-        <dd>1329712473@qq.com</dd>
-        <dt>Gender:</dt>
-        <dd>Male</dd>
-      </dl>
-    </div>
-    <div class="container container-two">
-      <div class="title">使用伪元素换行</div>
-      <dl>
-        <dt>Name:</dt>
-        <dd>Long Love</dd>
-        <dt>Email:</dt>
-        <dd>1329712473@qq.com</dd>
-        <dd>1329712473@qq.com</dd>
-        <dt>Gender:</dt>
-        <dd>Male</dd>
-      </dl>
-    </div>
-    <div class="container container-three">
-        <div class="title">使用伪元素添加逗号链接符</div>
-        <dl>
-          <dt>Name:</dt>
-          <dd>Long Love</dd>
-          <dt>Email:</dt>
-          <dd>1329712473@qq.com</dd>
-          <dd>1329712473@qq.com</dd>
-          <dt>Gender:</dt>
-          <dd>Male</dd>
-        </dl>
+    <div class="content">
+      <div class="bx">
+        <nav class="flex space-between">
+          <span class="logo">cssCase</span>
+          <div class="nav flex">
+            <ul class="flex">
+              <li><a href="http://www.css.case.qcwy.org.cn">首页</a></li>
+              <li>
+                <a href="http://www.css.case.qcwy.org.cn/caseList.html"
+                  >案例列表</a
+                >
+              </li>
+              <li>
+                <a target="_blank" href="http://www.blog.geyunjie.com">博客</a>
+              </li>
+              <li>
+                <a href="http://www.css.case.qcwy.org.cn/about.html">关于我</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://github.com/pythongyj/cssCase"
+                  >github</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="middle flex__1 py__020 border-box">
+          <div class="container-middle container-start">
+            <div class="title">原始效果</div>
+            <dl>
+              <dt>Name:</dt>
+              <dd>Long Love</dd>
+              <dt>Email:</dt>
+              <dd>1329712473@qq.com</dd>
+              <dd>1329712473@qq.com</dd>
+              <dt>Gender:</dt>
+              <dd>Male</dd>
+            </dl>
+          </div>
+          <div class="container-middle container-one">
+            <div class="title">dldt变为行内元素</div>
+            <dl>
+              <dt>Name:</dt>
+              <dd>Long Love</dd>
+              <dt>Email:</dt>
+              <dd>1329712473@qq.com</dd>
+              <dd>1329712473@qq.com</dd>
+              <dt>Gender:</dt>
+              <dd>Male</dd>
+            </dl>
+          </div>
+          <div class="container-middle container-two">
+            <div class="title">使用伪元素换行</div>
+            <dl>
+              <dt>Name:</dt>
+              <dd>Long Love</dd>
+              <dt>Email:</dt>
+              <dd>1329712473@qq.com</dd>
+              <dd>1329712473@qq.com</dd>
+              <dt>Gender:</dt>
+              <dd>Male</dd>
+            </dl>
+          </div>
+          <div class="container-middle container-three">
+            <div class="title">使用伪元素添加逗号链接符</div>
+            <dl>
+              <dt>Name:</dt>
+              <dd>Long Love</dd>
+              <dt>Email:</dt>
+              <dd>1329712473@qq.com</dd>
+              <dd>1329712473@qq.com</dd>
+              <dt>Gender:</dt>
+              <dd>Male</dd>
+            </dl>
+          </div>
+        </div>
+        <footer class="flex-center-center flex-column">
+          <p>
+            <span> Copyright © 2017-2020</span
+            ><span>
+              优秀经验<a
+                href="https://juejin.im/"
+                target="_blank"
+                rel="noopener"
+              >
+                掘金.</a
+              ></span
+            ><span>
+              视频学习<a
+                rel="nofollow"
+                target="_blank"
+                href="https://www.bilibili.com/"
+              >
+                B站学习.</a
+              ></span
+            >
+          </p>
+          <p><span> 浙ICP备19013115号-2 程序即女友，长情终一生</span></p>
+        </footer>
       </div>
+      <div id="container" class="container"></div>
+    </div>
+
+    <script>
+      new JParticles.particle("#container", {
+        num: "0.1",
+        lineShape: "cube",
+        parallax: true,
+        eventElem: document.querySelector(".bx"),
+      });
+    </script>
   </body>
 </html>
